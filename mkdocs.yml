@@ -1,16 +1,56 @@
 site_name: Python funcional
+repo_name: dunossauro/python-functional
+repo_url: https://github.com/dunossauro/python-funcional
 docs_dir: roteiros
+edit_uri: tree/main/roteiros
 theme:
   name: material
+  language: pt
+  features:
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+    - search.suggest
+    - search.highlight
+    - search.share
+  palette:
+    - scheme: slate
+      primary: black
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+    - scheme: default
+      primary: black
+      toggle:
+        icon: material/weather-night
+        name: Modo noturno
 
 markdown_extensions:
   - pymdownx.superfences
   - admonition
   - pymdownx.details
 
-
 plugins:
   - git-authors:
       show_email_address: false
       show_line_count: true
   - git-revision-date-localized
+  - search:
+      lang: pt
+
+extra:
+  social:
+    - icon: fontawesome/brands/youtube
+      link: https://youtube.com/dunossauro
+    - icon: fontawesome/brands/mastodon
+      link: https://bolha.us/@dunossauro
+    - icon: fontawesome/brands/github
+      link: https://github.com/dunossauro
+    - icon: fontawesome/brands/twitch
+      link: https://www.twitch.tv/dunossauro
+    - icon: simple/pixelfed
+      link: https://bolha.photos/dunossauro
+    - icon: simple/homepage
+      link: https://dunossauro.com
+    - icon: simple/codeberg
+      link: https://codeberg.org/dunossauro
