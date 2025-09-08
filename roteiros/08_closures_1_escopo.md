@@ -1,6 +1,4 @@
-[Retornar <<< 7. Nossa primeira biblioteca de funções](./07_construindo_nossa_lib.md) - [Continue lendo >>> 9. Usos variados de closures](./09_closures_2.md)
-
-# 8. Closures e contexto de variáveis
+# Closures e contexto de variáveis
 
 Já passamos funções como argumento, já retornamos funções e até já mudamos o comportamento das mesmas. Mas tem uma coisa que ainda não fizemos: definir uma função no corpo de outra função:
 
@@ -124,7 +122,7 @@ saudacoes('portugues', 'Jaber') # 'Olá Jaber'
 saudacoes('ingles', 'Python') # 'Hello Python'
 ```
 
-## 8.1 Classes vs closures
+## Classes vs closures
 
 
 Você deve ter percebido que até agora as closures tem dois tipos de comportamentos diferentes, porém a imutabilidade permanece:
@@ -194,7 +192,7 @@ class diga_oi:
 `__setattr__()` é o método da classe que 'seta' valores em atributos, se nós quebrarmos a implementação default do Python ele não vai conseguir fazer atribuições, porém, é muito mais complicado que implementar uma closure. Nessa implementação simples para a comparação as closures tem 4 linhas e as classe 7. Pra fazer a mesma coisa, acho muito mais atrativo usar uma closure, não só porque estamos falando de programação funcional, mas pela simplicidade de código ('legibilidade conta'). Mas vamos prosseguir.
 
 
-## 8.2 Mutação das variáveis de uma closure
+## Mutação das variáveis de uma closure
 
 Diferente do que eu disse até agora, os valores podem ser alterados no escopo da função externa, mas temos uma série de limitações. Caso o objeto passado como parâmetro, ou alocado na função externa, seja mutável (listas, dicionários, conjuntos, ...), o objeto pode receber normalmente as modificações, vamos fazer um teste:
 
@@ -402,5 +400,3 @@ def contador():
 Agora é possível gerar esse contador sem o uso da lista, então ele não 'enche nossa memória' com uma lista que pode ter um tamanho nada convencional. Porém isso fere o conceito de imutabilidade, mas ainda é melhor que uma classe porque quem faz acesso ao recurso `var` é somente a função interna sem que ele possa ser transformado pelo escopo externo, como é feito no caso das classes.
 
 Agora vamos olhar para um lado mais avançado das closures, mas você vai conseguir dar mais vazão e usos derivados das mesmas.
-
-[Retornar <<< 7. Nossa primeira biblioteca de funções](./07_construindo_nossa_lib.md) - [Continue lendo >>> 9. Usos variados de closures](./09_closures_2.md)

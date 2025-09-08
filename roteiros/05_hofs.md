@@ -1,6 +1,4 @@
-[Retornar <<< 4. Funções de redução/mapeamento](./04_funcoes_reducao_mapeamento.md) - [Continue lendo >>>> 6. Funções de ordem superior p.2](./06_funcoes_geradoras_e_hofs_p2.md)
-
-# 5. Funções de ordem superior
+# Funções de ordem superior
 
 Você deve achar que esquecemos muitas funções embutidas no tópico passado, não? Funções como:
 
@@ -13,7 +11,7 @@ Você deve achar que esquecemos muitas funções embutidas no tópico passado, n
 
 Porém, essas funções têm características especiais. Como assim? Elas podem receber além do iterável, uma outra função como argumento. Vamos lá. Você já foi introduzido ao map() no tópico passado.
 
-## 5.1 map()
+## map()
 
 A função map(), fazendo um gancho com o tópico anterior, é uma função de mapeamento, contudo, ela recebe o iterável em conjunto a uma função, a que fará o mapeamento. Vamos lá:
 
@@ -77,7 +75,7 @@ Funções de ordem superior são funções que recebem funções como argumento,
 
 Viu, foi simples.
 
-## 5.2 max()
+## max()
 
 A função max() é uma função de redução, e sem a função como parâmetro, ela vai ter o comportamento das funções que vimos no outro tópico.
 
@@ -129,7 +127,7 @@ max(lista, key=sum) # [5, 6]
 Como você já sabe compor funções, vamos imaginar que nossa sequência de entrada poderia ser maior que dois elementos, uma maneira bonita de fazer isso seria usar o sum(). Fica muito mais elegante.
 
 
-## 5.3 min()
+## min()
 
 Agora que já entendemos o conceito das HOFs, tudo fica mais simples. A função min() é a função equivalente a max(). Quando a max() pega o maior item da sequência, min() pega o menor.
 
@@ -141,7 +139,7 @@ min(lista, key=sum) # [5, 3]
 
 Não temos muito mais o que falar sobre min, é só um complemento.
 
-## 5.4 iter()
+## iter()
 
 A função embutida iter() tem duas formas, a primeira devolve o iterável de uma sequência.
 
@@ -212,7 +210,7 @@ O método readline, quando passado sem parâmetros efetua a leitura de um único
 Ou seja, é passado um objeto com um método no lugar de uma função. O método tem suas particularidades como não precisar de argumentos e agir no objeto em si. Isso parece óbvio, porém, quando construímos nossas próprias classes, o retorno pode não ser o esperado, como nas sequências embutidas do python.
 
 
-## 5.5 sorted()
+## sorted()
 
 Para os viciados em listas, como eu, o método sort da lista funciona bem, apesar de ordenar a lista e não trazer uma nova lista, o que as vezes é uma dor de cabeça.
 
@@ -294,7 +292,7 @@ sorted(autores, key=itemgetter(1))
 Mas, teremos alguns momentos a sós com o módulo operator, calma jovenzinho. Uma hora a gente chega lá.
 
 
-## 5.7 filter()
+## filter()
 
 Bom, já estamos chegando ao final e filter() não poderia ficar de fora. A única razão pro filter() ser a última função a ser comentada por agora é única e simplesmente por fugir das definições passadas até agora.
 
@@ -323,5 +321,3 @@ filterfalse(impares, lista) # [2, 4]
 ```
 
 Por hoje é só pessoal. No próximo tópico vamos aprender a criar nossas próprias HOFs.
-
-[Retornar <<< 4. Funções de redução/mapeamento](./04_funcoes_reducao_mapeamento.md) - [Continue lendo >>>> 6. Funções de ordem superior p.2](./06_funcoes_geradoras_e_hofs_p2.md)

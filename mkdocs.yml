@@ -1,0 +1,16 @@
+site_name: Python funcional
+docs_dir: roteiros
+theme:
+  name: material
+
+markdown_extensions:
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+
+
+plugins:
+  - git-authors:
+      show_email_address: false
+      show_line_count: true
+  - git-revision-date-localized

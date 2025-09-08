@@ -1,10 +1,8 @@
-[Retornar <<< 8. Closures e contexto de variáveis](./08_closures_1_escopo.md) - [Continue lendo >>> 10. Decoradores](./10_decoradores.md)
-
-# 9. Usos variados de closures
+# Usos variados de closures
 
 Vamos entender um pouco mais sobre closures e variar o uso com diversas coisas? Vamos tentar trazer alguns exemplos mais práticos do uso de closures. Mas agora vamos ver alguns modos diferentes dos vistos antes.
 
-## 9.1 Closures e lambdas
+## Closures e lambdas
 
 Todas as closures que criamos até agora podem ser substituídas por lambdas, pois as funções internas não passam de simples expressões:
 
@@ -21,7 +19,7 @@ ahoy('Jaber') # 'Ahoy Jaber'
 
 Uma coisa legal de usar funções `lambda`, e ao mesmo tempo um ponto negativo desse tipo de utilização, é que não há uma maneira de sobrescrever a variável local usando `nonlocal` pois o lambda só aceita uma expressão de uma linha. Para closures como essa em que o valor deve ser só lido isso pode funcionar bem.
 
-## 9.2 Métodos em closures
+## Métodos em closures
 
 Sim, agora estamos falando de Python e as coisas que o mundo Pythonico nos oferece:
 
@@ -45,7 +43,7 @@ ahoy('Jaber') # 'Olá Jaber'
 
 Em tempo de execução é possível fazer monkey patch em qualquer tipo de objeto em python, e isso permite que `n` funções possam caber dentro de uma closure. Como tudo pode ser modificado, foi criado um método interno. Manipular closures dessa maneira é mais eficiente do que usar classes, mas não vamos falar sobre isso agora. O que podemos absorver disso é que sem classes ninguém vai começar a pirar, pelo menos em Python não.
 
-## 9.3 Interagindo com valores `nonlocal`
+## Interagindo com valores `nonlocal`
 
 Nós já fizemos isso com composições de funções, mas como as closures são exatamente o inverso das composições, vamos fazer aqui também. Caso você tenha perdido o momento em que parcialmente consumimos iteráveis, isso foi feito no tópico 7.
 
@@ -132,7 +130,7 @@ Jaber diz: `Mas eu poderia criar um método para gerenciar aquele boolean em tem
 
 Sim e isso torna tudo mais lindo, mas eu vou deixar você tentar fazer isso sozinho.
 
-## 9.4 Closures que recebem funções (ou quase isso)
+## Closures que recebem funções (ou quase isso)
 
 Esse, embora seja um exemplo óbvio do que vimos até agora, pode ser que não tenha passado na cabeça de ninguém até agora, mas vamos lá:
 
@@ -153,7 +151,7 @@ Lembra de todo aquele caso do escopo das variáveis? `saudacao` está definida d
 
 Vamos entender melhor esse tipo de atribuição ao falar dos decoradores, onde vamos decorar funções. Isso é só um problema de escopo de que precisava ficar nítido. E agora é a hora.
 
-## 9.5 Decorando funções com closures
+## Decorando funções com closures
 
 Vamos voltar ao básico e fazer somas com números e partiremos de exemplos mais complexos no próximo tópico. Vamos imaginar que temos um caso de uma função em que todos os resultados necessitam ser pares. Tá, isso é muito simples, mas vamos decorar uma função que só executa uma soma simples primeiro:
 
@@ -224,5 +222,3 @@ soma(3, 2) # (False, 5)
 ```
 
 Agora estamos preparados para entender especialmente os decoradores no próximo tópico, que esse último exemplo tenha sido explicativo e vamos tentar resolver o problema do 'Ahoy' no próximo tópico.
-
-[Retornar <<< 8. Closures e contexto de variáveis](./08_closures_1_escopo.md) - [Continue lendo >>> 10. Decoradores](./10_decoradores.md)

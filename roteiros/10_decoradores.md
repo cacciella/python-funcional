@@ -1,11 +1,9 @@
-[Retornar <<< 9. Usos variados de closures](./09_closures_2.md) [<<< Página inicial >>>](https://github.com/Matiusco/python-funcional/blob/master/sumario.md)
-
-# 10. Decoradores
+# Decoradores
 
 Agora que você e o Jaber já estão craques em closures os decoradores não apresentam medo, pois tudo em decoradores são closures. No tópico 9.5 você usou um decorador e, embora eles não tenham sido devidamente explicados, vamos entender tudo sobre eles agora.
 
 
-## 10.1 Qual a cara de um decorador?
+## Qual a cara de um decorador?
 
 Um decorador nada mais é que um açúcar sintático para as closures. Viu? você já sabe tudo sobre eles, sem mesmo saber deles. Vamos entender essa composição diferente.
 
@@ -38,7 +36,7 @@ closure(funcao(argumentos)) # linha do problema
 
 Agora todas as vezes que você encontrar um `@` em cima de uma definição de uma função, você já sabe do que se trata.
 
-## 10.2 Montando nosso primeiro decorador
+## Montando nosso primeiro decorador
 
 No tópico 8 iniciamos nossa discussão sobre o uso de closures, vamos implementar closures de uma maneira mais eficiente e mais agradável visualmente.
 
@@ -189,11 +187,11 @@ Agora `validate_numbers` além de decorar nossas funções com a closure pode se
 
 Tudo funcionou muito bem. Vamos tentar entender um pouco mais sobre a natureza dos decoradores.
 
-## 10.2 Usando um pouco melhor a função externa
+## Usando um pouco melhor a função externa
 
 Embora a função externa que leva o nome do decorador ganhe como argumento a função a ser executada e execute a função interna, ela pode ter outras funcionalidades. Vamos pensar um pouco e gerar algumas coisas perigosas, mas que podem ser usadas em contexto onde sejam de suma importância.
 
-### 10.2.1 Um cache simples
+### Um cache simples
 
 Vamos pensar em uma função que executa algum tipo de cálculo mirabolante. Por exemplo, você pode fixar um cache para verificar se o número é par. Mas para isso você precisa do módulo da divisão por 2.
 
@@ -247,7 +245,7 @@ def soma(x, y):
 
 Agora, todas as vezes que os valores forem usado novamente a computação não será necessária, pois ela já está no dicionário. Vamos fazer isso com fibonacci, é surpreendente a diferença de desempenho, mas vamos aprender a medir o tempo de execução de uma função antes.
 
-### 10.2.2 Tempo de execução de uma função
+### Tempo de execução de uma função
 
 Esse decorador também segue uma ideia simples, podemos gravar em arquivos, gerar logs, chamar bancos de dados. Vai além da imaginação, mas vamos tentar medir o tempo que nossa função leva para ser executada.
 
@@ -274,7 +272,7 @@ def timeit(func):
 Esse é um decorador bem simples de se entender. Ele vai decorar uma função e nós saberemos o tempo que ela levou para ser executada em segundos. Você pode pensar que esse decorador é mais do mesmo, porém, ele nos mostra quão genéricos devem ser os decoradores. A ídeia é de que possam ser usados em qualquer lugar. Nesse caso `eh_par` acaba sendo um contra-exemplo de um bom decorador. Mas, vale lembrar que o objetivo dele é totalmente didático. Sei que você já deve ter entendido tudo sobre decoradores. Porém, eles também podem receber argumentos, o que os tornariam mais genéricose potentes. Então, vamos lá...
 
 
-## 10.3 Decoradores com parâmetros
+## Decoradores com parâmetros
 
 Uma das coisas mais legais de quando se está aprendendo Python, é que em um certo momento você acaba entendendo a ideia de que não podemos fazer código com alto acoplamento. Por exemplo, nos ultimos tópicos você simplesmente definiu uma `def` dentro de outra `def`. Porém, as coisas podem ser mais simpáticas quando você simplesmente se dá o prazer de experimentar.
 
@@ -322,7 +320,7 @@ def soma(*args):
 Embora quem faça a frente da nossa função seja `verbose`, o decorador real, a função que recebe a nossa função é a `funcao_externa`, como em todos os exemplos. A função `verbose` nesse caso, vai simplemente adicionar uma camada a mais no escopo local da função `funcao_externa` e por consequência também no escopo da `funcao_interna`. Ou seja, você pode parametrizar a execução do decorador sem que a parametrização seja feita com os argumentos passados a função decorada.
 
 
-## 10.4 Identidade das funções decoradas
+## Identidade das funções decoradas
 
 Continuando esse tópico, uma coisa muito interessante acontece com funções decoradas. Ela perde sua identidade e isso pode ser um grande problema para a fase de depuração do seu código. Imagine que quando uma função decorada apresentar um erro, o erro sempre será mostrado no decorador. Vamos tentar olhar como isso acontece:
 
@@ -391,7 +389,7 @@ Com isso, uma cópia dos métodos `__module__`, `__name__`, `__qualname__`, `__a
 
 Mas, uma coisa um pouco diferente aconteceu nesse exemplo com `@wraps`, existe um novo decorador inserido dentro da função interna do decorador e é isso que vamos ver no proximo tópico.
 
-## 10.5 Decorando decoradores
+## Decorando decoradores
 
 Como você deve ter percebido, não existem mais limites entre decorar funções e fazer encapsulamento das mesmas. Podemos decorar as funções que são decoradores e as funções decoradas também podem ter mais de um decorador. Por exemplo:
 
@@ -406,5 +404,3 @@ def funcao_que_redebe_dois_decoradores():
 nesse caso, o `decorador1` decora o `decorador2` que decora a função `funcao_que_redece_dois_decoradores`. Sim, eu sei que você entendeu e isso pode ter um ciclo infinito de possibilidades. Uma coisa que deve ser levada em consideração é que conforme você aninha decoradores as funções tendem a ficar mais dificeis de depurar e de prever o comportamento.
 
 E com isso terminamos aqui a primeira parte do nosso conteúdo sobre programação funcional sem imports. Tudo que construímos até aqui foi usando as funções [builtin](https://docs.python.org/3/library/functions.html#built-in-funcs) do python. Mas antes de prosseguir, gostaria de fazer algumas breves considerações matemáticas, para que seja possível criarmos código de mais qualidade.
-
-[Retornar <<< 9. Usos variados de closures](./09_closures_2.md) [<<< Página inicial >>>](../sumario.md)

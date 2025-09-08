@@ -1,29 +1,33 @@
-## Repositório sobre python funcional
+# Python funcional
 
-Quando procurei saber mais sobre programação funcional usando python descobri que as pessoas tem um certo tipo de preconceito com programação funcional, apesar de python ter muitas features que ajudam a implementar muitas coisas do paradigma. Que esses roteiros, vídeos, slides (e qualquer coisa que o valha) te ajudem a evoluir um pouco mais na programação com python.
+Quase um livro, quase um tutorial, quase qualquer coisa!
 
-Sei que o material em português é escasso em tudo que se diz relacionado a programação funcional, então espero que esse seja um guia para você poder conhecer um pouco mais sobre o mundo maravilhoso do cálculo lambda.
+---
 
-Os tópicos abordados até o momento estão disponíves no [sumário](sumario.md)
+Esse material foi escrito por [@dunossauro](https://dunossauro.com) entre fevereiro e maio de 2017.
 
+???+ tip "Atualizado?"
+	Decidi revisitá-lo em setembro de 2025 para criar essa página com mkdocs, antes estava em um formato ruim de ler, e revisar gramática de coisas que ficaram para trás.
 
-## Uma leve explanação sobre o conteúdo
+	Ele continua incompleto e nem sei se reflete minhas atuais opiniões sobre esse assunto. Mas, acredito que eseja importante ter um formato legível para ele.
 
-Pretendo dividir o conteúdo em três partes
+	Espero que, de alguma forma, ele seja útil.
 
-1. Uma introdução sobre funcional e ferramentas sem import (cerca de 10 tópicos)
-    - Funções, hofs, iteradores, closures e decoradores
+## Sumário
 
-2. Depois de entender os conceitos com Python, vamos falar um pouco sobre matemática básica, pra entender o que fizemos (cerca de 4 tópicos)
+1. [Saindo da zona de conforto](00_introducao.md)
+2. [Funções](01_funcoes.md)
+3. [Iteráveis e iteradores](02_iteraveis_iteradores.md)
+4. [Consumindo iteráveis](03_consumindo_iteraveis.md)
+5. [Funções de redução/mapeamento](04_funcoes_reducao_mapeamento.md)
+6. [Funções de ordem superior](05_hofs.md)
+7. [Funções de ordem superior Parte 2](06_funcoes_geradoras_e_hofs_p2.md)
+8. [Nossa primeira biblioteca de funções](07_construindo_nossa_lib.md)
+9. [Closures e contexto de variáveis](08_closures_1_escopo.md)
+10. [Usos variados de closures](09_closures_2.md)
+11. [Decoradores](10_decoradores.md)
 
-3. Usando as baterias internas (Ainda não tenho ideia do tamanho)
-    - intertools, operator e functools
-
-4. Usando bibliotecas externas para programação funcional (Ainda não tenho ideia do tamanho)
-    - fn.py, toolz, pymonad e macropy
-
-
-### [Agradecimentos](https://github.com/dunossauro/python-funcional/graphs/contributors) <3:
+## Agradecimentos <3
 
 [@magnvmopvs](https://github.com/magnvmopvs) pelos puxões de orelha nas partes que não estavam engraçadas e pelas infinitas correções de gramática ([#13](https://github.com/dunossauro/python-funcional/issues/13), [#14](https://github.com/dunossauro/python-funcional/issues/14), [#15](https://github.com/dunossauro/python-funcional/issues/15), [#16](https://github.com/dunossauro/python-funcional/issues/16), [#17](https://github.com/dunossauro/python-funcional/issues/17), [#18](https://github.com/dunossauro/python-funcional/issues/18), [#19](https://github.com/dunossauro/python-funcional/issues/19), [#20](https://github.com/dunossauro/python-funcional/issues/20),
 [#21](https://github.com/dunossauro/python-funcional/issues/21))
